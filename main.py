@@ -58,9 +58,9 @@ def run_game():
         # Game logic
         keys = pygame.key.get_pressed()
         if keys[pygame.K_UP]:
-            paddle_player.move(2.8)  # Positive value moves the paddle up
+            paddle_player.move(-2.8)  # Positive value moves the paddle up
         elif keys[pygame.K_DOWN]:
-            paddle_player.move(-2.8)  # Negative value moves the paddle down
+            paddle_player.move(2.8)  # Negative value moves the paddle down
 
         paddle_bot.ai(ball)
         ball.move(paddle_player, paddle_bot, powerups)
